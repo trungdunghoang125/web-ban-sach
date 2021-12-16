@@ -6,6 +6,7 @@ import Product from "../components/Product.js";
 export default function HomeScreen() {
     return (
         <div>
+          
             <div className="categories">
                 <div className="small-container">
                     <div className="row">

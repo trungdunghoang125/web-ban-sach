@@ -6,7 +6,6 @@ function Product(props) {
     const { product } = props;
     return (
         <>
-
             <div key={product._id} className="col-4">
                 <a href={`/product/${product._id}`}>
                     <img src={product.image} alt={product.name} />
