@@ -1,12 +1,20 @@
-import React from "react"
-
-import data from "../data.js"
+import React, {useEffect, useState} from "react"
+import axios from "axios"
+//import data from "../data.js"
 import Product from "../components/Product.js";
 
 export default function HomeScreen() {
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        const fetchData= async () => {
+            const {data} = await axios.get('/api/products');
+            setProducts(data);
+        };
+        fetchData();
+    }, []);
+
     return (
         <div>
-          
             <div className="categories">
                 <div className="small-container">
                     <div className="row">
@@ -27,14 +35,14 @@ export default function HomeScreen() {
             <div className="small-container">
                 <h2 className="title">Help-self</h2>
                 <div className="row">
-                    {data.products.map((product) => (
+                    {products.map((product) => (
                         <Product key={product._id} product={product}></Product>
                     ))}
 
                 </div>
                 <h2 className="title">Bestsellers</h2>
                 <div className="row">
-                    {data.products.map((product) => (
+                    {products.map((product) => (
                         <Product key={product._id} product={product}></Product>
                     ))}
                 </div>
