@@ -40,7 +40,7 @@ function ProductScreen() {
             <div className="small-container">
                 <div className="row">
                     <div className="col-4">
-                        <img src="/images/Book 4.jpg" alt="Book 4" />
+                        <img src="/images/Book4.jpg" alt="Book 4" />
                         <h4>Anna Karenina</h4>
                         <div className="rating">
                             <i className="fa fa-star"></i>
@@ -52,7 +52,7 @@ function ProductScreen() {
                         <p>Rs.500</p>
                     </div>
                     <div className="col-4">
-                        <img src="/images/Book 4.jpg" alt="Book 4" />
+                        <img src="/images/Book4.jpg" alt="Book 4" />
                         <h4>Anna Karenina</h4>
                         <div className="rating">
                             <i className="fa fa-star"></i>
@@ -64,7 +64,7 @@ function ProductScreen() {
                         <p>Rs.500</p>
                     </div>
                     <div className="col-4">
-                        <img src="/images/Book 4.jpg" alt="Book 4" />
+                        <img src="/images/Book4.jpg" alt="Book 4" />
                         <h4>Anna Karenina</h4>
                         <div className="rating">
                             <i className="fa fa-star"></i>
@@ -76,7 +76,7 @@ function ProductScreen() {
                         <p>Rs.500</p>
                     </div>
                     <div className="col-4">
-                        <img src="/images/Book 4.jpg" alt="Book 4" />
+                        <img src="/images/Book4.jpg" alt="Book 4" />
                         <h4>Anna Karenina</h4>
                         <div className="rating">
                             <i className="fa fa-star"></i>
