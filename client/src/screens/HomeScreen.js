@@ -4,11 +4,16 @@ import data from "../data.js"
 import Product from "../components/Product.js";
 import LoadingBox from "../components/LoadingBox.js";
 import MessageBox from "../components/MessageBox.js";
+import { useDispatch, useSelector } from "react-redux";
+import { listProducts } from "../actions/productActions.js";
 
 export default function HomeScreen() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
+    // const dispatch= useDispatch(); 
+    // const productList= useSelector((state) => state.productList);
+    // const {loading, error, products} = productList;
 
     useEffect(() => {
         const fetchData = async () => {
@@ -23,7 +28,9 @@ export default function HomeScreen() {
             }
         };
         fetchData();
-    }, []);
+
+        //dispatch(listProducts());
+    }, [/*dispatch*/]);
 
     return (
         <>
