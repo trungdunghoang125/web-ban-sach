@@ -4,7 +4,7 @@ import data from "./data"
 import { productDetailsReducer, productListReducer } from "./reducers/productReducers";
 
 const initialState= {};
-const reducer= combineReducers({
+const reducer = combineReducers({
     productList: productListReducer,
     productDetails: productDetailsReducer,
 });

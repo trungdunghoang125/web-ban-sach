@@ -11,10 +11,11 @@ import { detailsProduct } from "../actions/productActions";
 function ProductScreen(props) {
     const { id } = useParams();
     // const product = data.products.find((p) => p._id === id);
-    const dispatch= useDispatch();
+    const productId = id;
+    const dispatch = useDispatch();
     // const productId= props.match.params.id;
-    const productId= id;
-    const productDetails = useSelector((state) => state.productDetails)
+
+    const productDetails = useSelector((state) => state.productDetails);
     const { loading, error, product } = productDetails;
     // if (!product) {
     //     return <div>Not Found</div>
@@ -23,8 +24,9 @@ function ProductScreen(props) {
     useEffect(() => {
         dispatch(detailsProduct());
     }, [dispatch, productId]);
+
     return (
-        <div>
+        <>
             {loading ? (<LoadingBox></LoadingBox>)
                 :
                 error ? (<MessageBox variant="danger">{error}</MessageBox>)
@@ -111,7 +113,9 @@ function ProductScreen(props) {
                             </div>
                         </div>
                     )}
-        </div>
+
+
+        </>
     );
 }
 
