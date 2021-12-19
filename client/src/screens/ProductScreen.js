@@ -22,7 +22,7 @@ function ProductScreen(props) {
     // }
 
     useEffect(() => {
-        dispatch(detailsProduct());
+        dispatch(detailsProduct(productId));
     }, [dispatch, productId]);
 
     return (
