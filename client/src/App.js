@@ -8,6 +8,7 @@ import ProductScreen from "./screens/ProductScreen.js";
 import Navbar from "./components/Navbar.js";
 import HeroSection from "./components/HeroSection.js";
 import Footer from "./components/Footer.js";
+import CartScreen from "./screens/CartScreen.js";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       </div>
 
       <Routes>
+      <Route path="/cart/:id" element={<CartScreen />} />
         <Route path="/product/:id" element={<ProductScreen />} exact />
         <Route path="/" element={<HomeScreen />} />
       </Routes>
