@@ -9,8 +9,10 @@ import Navbar from "./components/Navbar.js";
 import HeroSection from "./components/HeroSection.js";
 import Footer from "./components/Footer.js";
 import CartScreen from "./screens/CartScreen.js";
+import { useSelector } from "react-redux";
 
 function App() {
+
   return (
     <BrowserRouter>
       <div className="header">

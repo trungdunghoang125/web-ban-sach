@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import data from "../data";
 import Rating from "./Rating";
 
@@ -7,10 +8,10 @@ function Product(props) {
     return (
         <>
             <div key={product._id} className="col-4">
-                <a href={`/product/${product._id}`}>
+                <Link to={`/product/${product._id}`}>
                     <img src={`/${product.image}`} alt={product.name} />
-                </a>
-                <a href={`/product/${product._id}`}> <h4>Anna Karenina</h4></a>
+                </Link>
+                <Link to={`/product/${product._id}`}> <h4>Anna Karenina</h4></Link>
                 <Rating rating={product.rating}></Rating>
                 <p>{product.price}</p>
             </div>
