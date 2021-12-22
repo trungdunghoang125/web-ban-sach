@@ -545,6 +545,47 @@ form a {
   transform: translateX(100px);
   transition: 1s;
 }
+
+
+
+
+/*----Edit Form----*/
+.form {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.form label {
+  margin: 1rem 0;
+}
+
+
+/*---Dropdown---*/
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 12rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: white;
+  margin: 0;
+  margin-top: 0.1rem;
+  border-radius: 0.5rem;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
 /* ---------------------Youtube Video------------------- */
 .youtube-container {
   max-width: 1300px;
@@ -616,6 +657,10 @@ form a {
 .alert-danger{
   color: #a02020;
   background: #ffe0e0e0;
+}
+
+.loading{
+  display: block !important;
 }
 
 

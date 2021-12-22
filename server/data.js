@@ -17,8 +17,8 @@ const data = {
       },
     },
     {
-      name: 'John',
-      email: 'user@example.com',
+      name: 'Dangg',
+      email: 'user@gmail.com',
       password: bcrypt.hashSync('1234', 8),
       isAdmin: false,
     },
@@ -26,7 +26,7 @@ const data = {
 
   products: [
     {
-      _id: '1',
+      //_id: '1',
       name: 'Nike Slim Shirt',
       category: 'Help-self',
       image: 'images/Book1.jpg',
@@ -38,7 +38,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '2',
+      //_id: '2',
       name: 'Adidas Fit Shirt',
       category: 'Help-self',
       image: 'images/Book2.jpg',
@@ -50,7 +50,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '3',
+      //_id: '3',
       name: 'Lacoste Free Shirt',
       category: 'Help-self',
       image: 'images/Book3.jpg',
@@ -62,7 +62,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '4',
+      //_id: '4',
       name: 'Nike Slim Pant',
       category: 'Help-self',
       image: 'images/Book4.jpg',
@@ -74,7 +74,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '5',
+      //_id: '5',
       name: 'Puma Slim Pant',
       category: 'Help-self',
       image: 'images/Book5.jpg',
@@ -86,7 +86,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '6',
+      //_id: '6',
       name: 'Adidas Fit Pant',
       category: 'Help-self',
       image: 'images/Book6.jpg',
@@ -98,8 +98,8 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '7',
-      name: 'Puma Slim Pant',
+      //_id: '7',
+      name: 'Pumax Slim Pant',
       category: 'Help-self',
       image: 'images/Book7.jpg',
       price: 65,
@@ -110,8 +110,8 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '8',
-      name: 'Nike Slim Pant',
+      //_id: '8',
+      name: 'Nike Slim Panttt',
       category: 'Help-self',
       image: 'images/Book8.jpg',
       price: 78,

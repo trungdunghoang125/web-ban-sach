@@ -1,11 +1,18 @@
 import React from "react"
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
+import { signout } from "../actions/userActions";
 export default function Navbar() {
-
+    const dispatch = useDispatch();
     const cart = useSelector((state) => state.cart);
     const { cartItems } = cart;
+
+    const userSignin = useSelector((state) => state.userSignin);
+    const { userInfo } = userSignin;
+
+    const signoutHandler = () => {
+        dispatch(signout());
+      };
 
     return (
         <>
@@ -19,10 +26,33 @@ export default function Navbar() {
                 <nav>
                     <ul id="MenuItems">
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/">Ebooks</Link></li>
                         <li><Link to="/">About</Link></li>
                         <li><Link to="/">Contact</Link></li>
-                        <li><Link to="/">Account</Link></li>
+                        {
+                            userInfo ? (
+                                <div className="dropdown">
+                                    <li><Link to="#">{userInfo.name}<i className="fa fa-caret-down"></i>{' '}</Link></li>
+                                    <ul className="dropdown-content">
+                                        <li>
+                                            <Link to="/profile">User Profile</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/orderhistory">Order History</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="#signout" onClick={signoutHandler}>
+                                                Sign Out
+                                            </Link>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            ) :
+                                (
+                                    <li><Link to="/signin">Sign In</Link></li>
+                                )
+                        }
+
                     </ul>
                 </nav>
                 <Link to="/cart/:id">

@@ -55,7 +55,7 @@ export default function CartScreen(props) {
                                         <tr key={item.product}>
                                             <td>
                                                 <div className="cart-info">
-                                                    <img src={item.image} alt={item.name} />
+                                                    <img src={`/${item.image}`} alt={item.name} />
                                                     <div>
                                                         <Link to={`/product/${item.product}`}><p>{item.name}</p></Link>
                                                         <small>Price: Rs500.00</small> <br />
