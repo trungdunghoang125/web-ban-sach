@@ -59,7 +59,7 @@ function ProductScreen(props) {
                                                 <span className="danger">Unavailable</span>
                                             )}
                                         </div>
-                                    
+
                                         {
                                             product.countInStock > 0 && (
                                                 <>
@@ -72,10 +72,10 @@ function ProductScreen(props) {
                                                                 onChange={(e) => setQty(e.target.value)}
                                                             >
                                                                 {[...Array(product.countInStock).keys()].map((x) => (
-                                                                        <option key={x + 1} value={x + 1}>
-                                                                            {x + 1}
-                                                                        </option>
-                                                                    )
+                                                                    <option key={x + 1} value={x + 1}>
+                                                                        {x + 1}
+                                                                    </option>
+                                                                )
                                                                 )}
                                                             </select>
 
@@ -84,9 +84,7 @@ function ProductScreen(props) {
                                                     <div>
                                                         <button className="btn primary block" onClick={addToCartHandler}>Add To Cart</button>
                                                     </div>
-
                                                 </>
-
                                             )
                                         }
 

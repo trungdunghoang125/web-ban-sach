@@ -25,7 +25,7 @@ export default function Navbar() {
                         <li><Link to="/">Account</Link></li>
                     </ul>
                 </nav>
-                <Link to="/cart">
+                <Link to="/cart/:id">
                     <img
                         src="/images/cart.png"
                         alt="Shoping Cart"

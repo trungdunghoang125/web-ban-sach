@@ -8,10 +8,20 @@ body {
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
+
+
+
 
 #root{
   height: 100%;
+  
+/*--Pin footer stay bottom of page---*/
+  min-height: 100vh; 
+  margin: 0; 
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .shopping-cart{
@@ -185,6 +195,8 @@ small {
   cursor: pointer;
   transition: transform 0.5s;
 }
+
+
 .testimonial .col-3 img {
   width: 50px;
   margin-top: 20px;
@@ -208,6 +220,41 @@ small {
   font-size: 16px;
 }
 
+
+
+/*---Testimonial for col-4--*/
+
+.testimonial .col-4 {
+  text-align: center;
+  padding: 40px 20px;
+ 
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+
+.testimonial .col-4 img {
+  width: 50px;
+  margin-top: 20px;
+  border-radius: 50%;
+}
+.testimonial .col-4:hover {
+  transform: translateY(-10px);
+}
+
+.col-4 p {
+  font-size: 12px;
+  margin: 12px 0;
+  color: #777;
+}
+.testimonial .col-4 h3 {
+  font-weight: 600;
+  color: #555;
+  font-size: 16px;
+}
+
+
 /* ------------------------publishers---------------------- */
 .publishers {
   margin: 100px auto;
@@ -226,10 +273,12 @@ small {
 
 /* ---------------footer---------------- */
 .footer {
+
   background: #000;
   color: #8a8a8a;
   font-size: 14px;
   padding: 60px 0 20px;
+  
 }
 .footer p {
   color: #8a8a8a;

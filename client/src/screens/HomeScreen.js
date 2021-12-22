@@ -102,7 +102,7 @@ export default function HomeScreen() {
                             <div className="testimonial">
                                 <div className="small-container">
                                     <div div className="row">
-                                        <div className="col-3">
+                                        <div className="col-4">
                                             <i className="fa fa-quote-left"></i>
                                             <p>
                                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure
@@ -118,7 +118,23 @@ export default function HomeScreen() {
                                             <img src="images/zeeshan.jpg" alt="zeeshansaeed" />
                                             <h3>Your Name</h3>
                                         </div>
-                                        <div className="col-3">
+                                        <div className="col-4">
+                                            <i className="fa fa-quote-left"></i>
+                                            <p>
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure
+                                                debitis perferendis, necessitatibus ipsum quia ad sit amet.
+                                            </p>
+                                            <div className="rating">
+                                                <i className="fa fa-star"></i>
+                                                <i className="fa fa-star"></i>
+                                                <i className="fa fa-star"></i>
+                                                <i className="fa fa-star"></i>
+                                                <i className="fa fa-star-o"></i>
+                                            </div>
+                                            <img src="images/Boo12.jpg" alt="zeeshansaeed" />
+                                            <h3>Your Name</h3>
+                                        </div>
+                                        <div className="col-4">
                                             <i className="fa fa-quote-left"></i>
                                             <p>
                                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure
@@ -134,7 +150,7 @@ export default function HomeScreen() {
                                             <img src="images/zeeshan.jpg" alt="zeeshansaeed" />
                                             <h3>Your Name</h3>
                                         </div>
-                                        <div className="col-3">
+                                        <div className="col-4">
                                             <i className="fa fa-quote-left"></i>
                                             <p>
                                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure

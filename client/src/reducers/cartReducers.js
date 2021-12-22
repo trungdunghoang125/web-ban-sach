@@ -1,4 +1,4 @@
-const { CART_ADD_ITEM } = require('../constants/cartConstants');
+const { CART_ADD_ITEM, CART_REMOVE_ITEM } = require('../constants/cartConstants');
 
 export const cartReducer = (state = { cartItems: [] }, action) => {
     switch (action.type) {
@@ -14,6 +14,12 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
             } else {
                 return { ...state, error: '', cartItems: [...state.cartItems, item] };
             }
+        case CART_REMOVE_ITEM:
+            return {
+                ...state,
+                error: '',
+                cartItems: state.cartItems.filter((p) => p.product !== action.payload),
+            };
         default:
             return state;
     }
