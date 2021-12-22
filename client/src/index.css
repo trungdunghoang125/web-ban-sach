@@ -477,6 +477,7 @@ th:last-child {
 }
 
 /* -------------------account-paage------------------ */
+/*
 .account-page {
   padding: 50px 0;
   background: radial-gradient(#fff, #ffd6d6);
@@ -545,7 +546,7 @@ form a {
   transform: translateX(100px);
   transition: 1s;
 }
-
+*/
 
 
 
