@@ -16,6 +16,9 @@ import ShippingAddressScreen from "./screens/ShippingAddressScreen.js";
 import PaymentMethodScreen from "./screens/PaymentMethodScreen.js";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen.js";
 import OrderScreen from "./screens/OrderScreen.js";
+import OrderHistoryScreen from "./screens/OrderHistoryScreen.js";
+import ProfileScreen from "./screens/ProfileScreen.js";
+import PrivateRoute from "./components/PrivateRoute.js";
 
 function App() {
 
@@ -39,6 +42,8 @@ function App() {
         <Route path="/payment" element={<PaymentMethodScreen />} />
         <Route path="/placeorder" element={<PlaceOrderScreen />} />
         <Route path="/order/:id" element={<OrderScreen />} />
+        <Route path="/orderhistory" element={<OrderHistoryScreen />} />
+        <Route path="/profile" element={<PrivateRoute><ProfileScreen /></PrivateRoute>}/>
         <Route path="/" element={<HomeScreen />} />
       </Routes>
 
