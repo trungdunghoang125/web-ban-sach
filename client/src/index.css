@@ -690,9 +690,14 @@ form a {
   background-color: #e0e0ff;
 }
 
-.alert-danger{
+.alert-danger {
   color: #a02020;
   background: #ffe0e0e0;
+}
+
+.alert-success {
+  color: #20a020;
+  background-color: #ffe0e0;
 }
 
 .loading{
