@@ -51,7 +51,7 @@ export default function PaymentMethodScreen() {
                             required
                             onChange={(e) => setPaymentMethod(e.target.value)}
                         ></input>
-                        <label htmlFor="stripe">Stripe</label>
+                        <label htmlFor="stripe">CART</label>
                     </div>
                 </div>
                 <div>
