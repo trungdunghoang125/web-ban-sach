@@ -19,6 +19,8 @@ import OrderScreen from "./screens/OrderScreen.js";
 import OrderHistoryScreen from "./screens/OrderHistoryScreen.js";
 import ProfileScreen from "./screens/ProfileScreen.js";
 import PrivateRoute from "./components/PrivateRoute.js";
+import ProductListScreen from "./screens/ProductListScreen.js";
+import AdminRoute from "./components/AdminRoute.js";
 
 function App() {
 
@@ -43,7 +45,15 @@ function App() {
         <Route path="/placeorder" element={<PlaceOrderScreen />} />
         <Route path="/order/:id" element={<OrderScreen />} />
         <Route path="/orderhistory" element={<OrderHistoryScreen />} />
-        <Route path="/profile" element={<PrivateRoute><ProfileScreen /></PrivateRoute>}/>
+        <Route path="/profile" element={<PrivateRoute><ProfileScreen /></PrivateRoute>} />
+        <Route
+          path="/productlist"
+          element={
+            <AdminRoute>
+              <ProductListScreen />
+            </AdminRoute>
+          }
+        />
         <Route path="/" element={<HomeScreen />} />
       </Routes>
 

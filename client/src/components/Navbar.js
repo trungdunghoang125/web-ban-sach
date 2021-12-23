@@ -12,7 +12,7 @@ export default function Navbar() {
 
     const signoutHandler = () => {
         dispatch(signout());
-      };
+    };
 
     return (
         <>
@@ -47,12 +47,33 @@ export default function Navbar() {
                                     </ul>
 
                                 </div>
-                            ) :
-                                (
-                                    <li><Link to="/signin">Sign In</Link></li>
-                                )
-                        }
-
+                            ) : (
+                                <li><Link to="/signin">Sign In</Link></li>
+                            )}
+                        {userInfo && userInfo.isAdmin && (
+                            <div className="dropdown">
+                                <Link to="#admin">
+                                    Admin <i className="fa fa-caret-down"></i>
+                                </Link>
+                                <ul className="dropdown-content">
+                                    <li>
+                                        <Link to="/dashboard">Dashboard</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/productlist">Products</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/orderlist">Orders</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/userlist">Users</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/support">Support</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
                     </ul>
                 </nav>
                 <Link to="/cart/:id">
