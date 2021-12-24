@@ -42,19 +42,19 @@ export default function HomeScreen() {
 
 
                             <div className="small-container">
-                                <h2 className="title">Help-self</h2>
+                                <h2 className="title">Ebooks</h2>
                                 <div className="row">
                                     {products.map((product) => (
                                         <Product key={product._id} product={product}></Product>
                                     ))}
 
                                 </div>
-                                <h2 className="title">Bestsellers</h2>
+                                {/* <h2 className="title">Bestsellers</h2>
                                 <div className="row">
                                     {products.map((product) => (
                                         <Product key={product._id} product={product}></Product>
                                     ))}
-                                </div>
+                                </div> */}
                             </div>
 
 
@@ -180,7 +180,6 @@ export default function HomeScreen() {
 
                         </div>
                     )}
-
         </>
     )
 }

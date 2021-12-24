@@ -113,8 +113,6 @@ export default function ProductListScreen() {
                         ))}
                     </tbody>
                 </table>
-
-
             )}
         </div>
     );

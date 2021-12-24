@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from "react-router-dom";
 
 export default function HeroSection() {
     return (
@@ -13,7 +14,7 @@ export default function HeroSection() {
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br />
                         Incidunt voluptas, porro nisi beatae inventore consequuntur?
                     </p>
-                    <a href="" className="btn">Explore Now &#x27F6;</a>
+                    <Link to="/" className="btn">Explore Now &#x27F6;</Link>
                 </div>
                 <div className="col-2">
                     <img src="images/header-pic.png" alt="Header Pic" />

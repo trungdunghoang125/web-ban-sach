@@ -11,7 +11,7 @@ function Product(props) {
                 <Link to={`/product/${product._id}`}>
                     <img src={`/${product.image}`} alt={product.name} />
                 </Link>
-                <Link to={`/product/${product._id}`}> <h4>Anna Karenina</h4></Link>
+                <Link to={`/product/${product._id}`}> <h4>{product.name}</h4></Link>
                 <Rating rating={product.rating}></Rating>
                 <p>{product.price}</p>
             </div>
