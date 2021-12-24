@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "../../node_modules/react-router/index";
 import { listProducts } from "../actions/productActions";
-import { createProduct } from "../actions/productActions";
+import { createProduct, deleteProduct } from "../actions/productActions";
 import Product from "../components/Product";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
-import { PRODUCT_CREATE_RESET } from "../constants/productConstants";
+import { PRODUCT_CREATE_RESET, PRODUCT_DELETE_RESET } from "../constants/productConstants";
 
 export default function ProductListScreen() {
     const navigate = useNavigate();
@@ -22,9 +22,14 @@ export default function ProductListScreen() {
     const productList = useSelector((state) => state.productList);
     const { loading, error, products/*, page, pages*/ } = productList;
     const dispatch = useDispatch();
+
+    const productDelete = useSelector((state) => state.productDelete);
+    const {
+        loading: loadingDelete,
+        error: errorDelete,
+        success: successDelete,
+    } = productDelete;
     useEffect(() => {
-
-
         if (successCreate) {
             dispatch({ type: PRODUCT_CREATE_RESET });
             navigate(`/product/${createdProduct._id}/edit`);
@@ -35,6 +40,9 @@ export default function ProductListScreen() {
         // dispatch(
         //     listProducts({ seller: sellerMode ? userInfo._id : '', pageNumber })
         // );
+        if (successDelete) {
+            dispatch({ type: PRODUCT_DELETE_RESET });
+        }
         dispatch(listProducts());
     }, [
         createdProduct,
@@ -42,15 +50,16 @@ export default function ProductListScreen() {
         navigate,
         // sellerMode,
         successCreate,
-        // successDelete,
+        successDelete,
         // userInfo._id,
         // pageNumber,
     ]);
 
+
     const deleteHandler = (product) => {
-        // if (window.confirm('Are you sure to delete?')) {
-        //     dispatch(deleteProduct(product._id));
-        // }
+        if (window.confirm('Are you sure to delete?')) {
+            dispatch(deleteProduct(product._id));
+        }
     };
 
     const createHandler = () => {
@@ -64,8 +73,9 @@ export default function ProductListScreen() {
                     Create Product
                 </button>
             </div>
+            {loadingDelete && <LoadingBox></LoadingBox>}
+            {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
 
-            
 
             {loadingCreate && <LoadingBox></LoadingBox>}
             {errorCreate && <MessageBox variant="danger">{errorCreate}</MessageBox>}

@@ -22,6 +22,8 @@ import PrivateRoute from "./components/PrivateRoute.js";
 import ProductListScreen from "./screens/ProductListScreen.js";
 import AdminRoute from "./components/AdminRoute.js";
 import ProductEditScreen from "./screens/ProductEditScreen.js";
+import OrderListScreen from "./screens/OrderListScreen.js";
+
 function App() {
 
   return (
@@ -38,7 +40,7 @@ function App() {
       <Routes>
         <Route path="/cart/:id" element={<CartScreen />} />
         <Route path="/product/:id" element={<ProductScreen />} exact />
-        <Route path="/product/:id/edit" element={<ProductEditScreen />} exact/>
+        <Route path="/product/:id/edit" element={<ProductEditScreen />} exact />
         <Route path="/signin" element={<SigninScreen />} />
         <Route path="/register" element={<RegisterScreen />} />
         <Route path="/shipping" element={<ShippingAddressScreen />} />
@@ -52,6 +54,15 @@ function App() {
           element={
             <AdminRoute>
               <ProductListScreen />
+            </AdminRoute>
+          }
+        />
+
+        <Route
+          path="/orderlist"
+          element={
+            <AdminRoute>
+              <OrderListScreen />
             </AdminRoute>
           }
         />

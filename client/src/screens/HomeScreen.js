@@ -1,13 +1,16 @@
 import React, { useEffect, useState, getAllNotes } from "react"
 import axios from "axios"
 import data from "../data.js"
+import {Link, useParams, useNavigate} from "react-router-dom"
 import Product from "../components/Product.js";
 import LoadingBox from "../components/LoadingBox.js";
 import MessageBox from "../components/MessageBox.js";
 import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../actions/productActions.js";
 
-export default function HomeScreen() {
+
+export default function HomeScreen(props) {
+    const product= props;
     const dispatch= useDispatch(); 
     const productList= useSelector((state) => state.productList);
     const {loading, error, products} = productList;
@@ -75,7 +78,7 @@ export default function HomeScreen() {
                                                 young people think twice about the promise that going to college
                                                 at any cost is the only path to upward social mobility.
                                             </small>
-                                            <a href="#" className="btn">Buy Now &#8594;</a>
+                                            <div key={product._id}><Link to={`/product/${product._id}`} className="btn">Buy Now &#8594;</Link></div>
                                         </div>
                                     </div>
                                 </div>
@@ -89,8 +92,7 @@ export default function HomeScreen() {
                                         <div className="col-4">
                                             <i className="fa fa-quote-left"></i>
                                             <p>
-                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure
-                                                debitis perferendis, necessitatibus ipsum quia ad sit amet.
+                                                Team leader
                                             </p>
                                             <div className="rating">
                                                 <i className="fa fa-star"></i>
@@ -100,13 +102,12 @@ export default function HomeScreen() {
                                                 <i className="fa fa-star-o"></i>
                                             </div>
                                             <img src="images/zeeshan.jpg" alt="zeeshansaeed" />
-                                            <h3>Your Name</h3>
+                                            <h3>Luong Ngoc Dang</h3>
                                         </div>
                                         <div className="col-4">
                                             <i className="fa fa-quote-left"></i>
                                             <p>
-                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure
-                                                debitis perferendis, necessitatibus ipsum quia ad sit amet.
+                                               Member
                                             </p>
                                             <div className="rating">
                                                 <i className="fa fa-star"></i>
@@ -116,13 +117,12 @@ export default function HomeScreen() {
                                                 <i className="fa fa-star-o"></i>
                                             </div>
                                             <img src="images/Boo12.jpg" alt="zeeshansaeed" />
-                                            <h3>Your Name</h3>
+                                            <h3>Hoang Trung Dung</h3>
                                         </div>
                                         <div className="col-4">
                                             <i className="fa fa-quote-left"></i>
                                             <p>
-                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure
-                                                debitis perferendis, necessitatibus ipsum quia ad sit amet.
+                                               Member
                                             </p>
                                             <div className="rating">
                                                 <i className="fa fa-star"></i>
@@ -132,13 +132,12 @@ export default function HomeScreen() {
                                                 <i className="fa fa-star-o"></i>
                                             </div>
                                             <img src="images/zeeshan.jpg" alt="zeeshansaeed" />
-                                            <h3>Your Name</h3>
+                                            <h3>Nguyen Van Tam</h3>
                                         </div>
                                         <div className="col-4">
                                             <i className="fa fa-quote-left"></i>
                                             <p>
-                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure
-                                                debitis perferendis, necessitatibus ipsum quia ad sit amet.
+                                               Member
                                             </p>
                                             <div className="rating">
                                                 <i className="fa fa-star"></i>
@@ -148,7 +147,7 @@ export default function HomeScreen() {
                                                 <i className="fa fa-star-o"></i>
                                             </div>
                                             <img src="images/zeeshan.jpg" alt="zeeshansaeed" />
-                                            <h3>Your Name</h3>
+                                            <h3>Nguyen Van Luan</h3>
                                         </div>
                                     </div>
                                 </div>
