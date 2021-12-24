@@ -54,7 +54,7 @@ function ProductScreen(props) {
                                         <h3>Status</h3>
                                         <div>
                                             {product.countInStock > 0 ? (
-                                                <span className="success">In Stock</span>
+                                                <span className="success">In Stock </span>
                                             ) : (
                                                 <span className="danger">Unavailable</span>
                                             )}
