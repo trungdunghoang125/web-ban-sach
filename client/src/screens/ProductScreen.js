@@ -95,68 +95,9 @@ function ProductScreen(props) {
                                 </div>
                             </div>
 
-                            <div className="small-container">
-                                <div className="row row-2">
-                                    <h2>Related Books</h2>
-                                    <p>View More</p>
-                                </div>
-                            </div>
-
-                            <div className="small-container">
-                                <div className="row">
-                                    <div className="col-4">
-                                        <img src="/images/Book4.jpg" alt="Book 4" />
-                                        <h4>Anna Karenina</h4>
-                                        <div className="rating">
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star-o"></i>
-                                        </div>
-                                        <p>Rs.500</p>
-                                    </div>
-                                    <div className="col-4">
-                                        <img src="/images/Book4.jpg" alt="Book 4" />
-                                        <h4>Anna Karenina</h4>
-                                        <div className="rating">
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star-o"></i>
-                                        </div>
-                                        <p>Rs.500</p>
-                                    </div>
-                                    <div className="col-4">
-                                        <img src="/images/Book4.jpg" alt="Book 4" />
-                                        <h4>Anna Karenina</h4>
-                                        <div className="rating">
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star-o"></i>
-                                        </div>
-                                        <p>Rs.500</p>
-                                    </div>
-                                    <div className="col-4">
-                                        <img src="/images/Book4.jpg" alt="Book 4" />
-                                        <h4>Anna Karenina</h4>
-                                        <div className="rating">
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star-o"></i>
-                                        </div>
-                                        <p>Rs.500</p>
-                                    </div>
-                                </div>
-                            </div>
+                           
                         </div>
                     )}
-
 
         </>
     );
