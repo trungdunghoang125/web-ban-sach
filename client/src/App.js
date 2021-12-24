@@ -24,6 +24,7 @@ import AdminRoute from "./components/AdminRoute.js";
 import ProductEditScreen from "./screens/ProductEditScreen.js";
 import OrderListScreen from "./screens/OrderListScreen.js";
 import UserListScreen from "./screens/UserListScreen.js";
+import UserEditScreen from "./screens/UserEditScreen.js";
 
 function App() {
 
@@ -73,6 +74,15 @@ function App() {
           element={
             <AdminRoute>
               <UserListScreen />
+            </AdminRoute>
+          }
+        />
+
+        <Route
+          path="/user/:id/edit"
+          element={
+            <AdminRoute>
+              <UserEditScreen />
             </AdminRoute>
           }
         />
