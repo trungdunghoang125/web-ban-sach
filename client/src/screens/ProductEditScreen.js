@@ -100,16 +100,20 @@ export default function ProductEditScreen() {
                     <h1>Edit Product {productId}</h1>
                 </div>
 
-                {loadingUpdate && <LoadingBox></LoadingBox>}
-                {errorUpdate && <MessageBox variant="danger">{errorUpdate}</MessageBox>}
+
                 {loading ? (
                     <LoadingBox></LoadingBox>
                 ) : error ? (
                     <MessageBox variant="danger">{error}</MessageBox>
                 ) : (
                     <>
-
-
+                        {loadingUpdate && <LoadingBox></LoadingBox>}
+                        {errorUpdate && <MessageBox variant="danger">{errorUpdate}</MessageBox>}
+                        {successUpdate && (
+                            <MessageBox variant="success">
+                                Edit Successfully
+                            </MessageBox>
+                        )}
                         <div>
                             <label htmlFor="name">Name</label>
                             <input

@@ -1,35 +1,32 @@
 import React from "react"
 
+
 export default function Footer() {
     return (
 
         <div className="footer">
             <div className="container">
                 <div className="row">
-                    <div className="footer-col-1">
-                        <h3>Download Our App</h3>
-                        <p>Download App for Android and ios mobile phone.</p>
-                        <div className="app-logo">
-                            <img src="/images/Playstore.png" />
-                            <img src="/images/Applestore.png" />
-                        </div>
+                    <div className="footer-col-2">
+                        <h3>Contact</h3>
+                        <p>Questions? Go ahead.</p>
+                        <form action="/action_page.php" target="_blank">
+                          
+                            <div className="w3-section"><p><input className="w3-input w3-border" type="text" placeholder="Name" name="Name" required /></p></div>
+                            <div className="w3-section"><p><input className="w3-input w3-borde" type="text" placeholder="Email" name="Email" required /></p></div>
+                            <div className="w3-section"><p><input className="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required /></p></div>
+                            <div className="w3-section"><p><input className="w3-input w3-border" type="text" placeholder="Message" name="Message" required /></p></div>
+                            <button type="submit" class="w3-button w3-block w3-gray">Send</button>
+                        </form>
                     </div>
                     <div className="footer-col-2">
                         <img src="/images/EbookStore-Logo-footer.png" />
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Reiciendis, Lorem ipsum dolor sit amet.
-                        </p>
+                            “Your time is limited, so don't waste it living someone else's life.”
+                        </p> <br />
+                        <p>--Steve Jobs--</p>
                     </div>
-                    <div className="footer-col-3">
-                        <h3>Useful Links</h3>
-                        <ul>
-                            <li>Coupons</li>
-                            <li>Blog Post</li>
-                            <li>Return Policy</li>
-                            <li>Join Affiliate</li>
-                        </ul>
-                    </div>
+                    
                     <div className="footer-col-4">
                         <h3>Follow us</h3>
                         <ul>
@@ -41,7 +38,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <hr />
-                <p className="copyright">Copyright 2020 - EbookStore</p>
+                <p className="copyright">Ebooks For Everyone</p>
             </div>
         </div>
 
