@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost:27017/web-ban-sach').then(() => {
+mongoose.connect(process.env.MONGODB_URL || 'mongodb+srv://admin:1234@cluster0.ec2eh.mongodb.net/web-ban-sach?retryWrites=true&w=majority').then(() => {
     console.log('mongodb is connectinggg')
 });
 app.use('/api/uploads', uploadRouter);
