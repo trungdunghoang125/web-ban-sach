@@ -170,3 +170,4 @@ export const updateUser = (user) => async (dispatch, getState) => {
         dispatch({ type: USER_UPDATE_FAIL, payload: message });
     }
 };
+

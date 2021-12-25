@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { listOrders, deleteOrder } from "../actions/orderActions";
 import { ORDER_DELETE_RESET } from "../constants/orderConstants";
 
@@ -9,6 +9,8 @@ import MessageBox from "../components/MessageBox";
 
 export default function OrderListScreen() {
     const navigate = useNavigate();
+    const { pathname } = useLocation();
+    const sellerMode = pathname.indexOf('/seller') >= 0;
     const orderList = useSelector((state) => state.orderList);
     const { loading, error, orders } = orderList;
 
@@ -19,12 +21,15 @@ export default function OrderListScreen() {
         error: errorDelete,
         success: successDelete,
     } = orderDelete;
+
+    const userSignin = useSelector((state) => state.userSignin);
+    const { userInfo } = userSignin;
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch({ type: ORDER_DELETE_RESET });
-        dispatch(listOrders());
+        dispatch(listOrders({ seller: sellerMode ? userInfo._id : '' }));
 
-    }, [dispatch, successDelete]);
+    }, [dispatch, sellerMode, successDelete, userInfo._id]);
 
 
     const deleteHandler = (order) => {

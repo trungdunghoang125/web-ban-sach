@@ -25,6 +25,7 @@ import ProductEditScreen from "./screens/ProductEditScreen.js";
 import OrderListScreen from "./screens/OrderListScreen.js";
 import UserListScreen from "./screens/UserListScreen.js";
 import UserEditScreen from "./screens/UserEditScreen.js";
+import SellerRoute from "./components/SellerRoute.js";
 
 function App() {
 
@@ -58,6 +59,7 @@ function App() {
               <ProductListScreen />
             </AdminRoute>
           }
+          exact
         />
 
         <Route
@@ -67,6 +69,7 @@ function App() {
               <OrderListScreen />
             </AdminRoute>
           }
+          exact
         />
 
         <Route
@@ -86,6 +89,25 @@ function App() {
             </AdminRoute>
           }
         />
+
+        <Route
+          path="/productlist/seller"
+          element={
+            <SellerRoute>
+              <ProductListScreen />
+            </SellerRoute>
+          }
+        />
+
+        <Route
+          path="/orderlist/seller"
+          element={
+            <SellerRoute>
+              <OrderListScreen />
+            </SellerRoute>
+          }
+        />
+
         <Route path="/" element={<HomeScreen />} />
       </Routes>
 
