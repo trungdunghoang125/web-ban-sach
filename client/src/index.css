@@ -66,6 +66,22 @@ p {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+/*Add row*/
+
+.row.center {
+  justify-content: center;
+}
+.row.top {
+  align-items: flex-start;
+}
+.row.start {
+  justify-content: flex-start;
+}
+
+.col-1{
+  flex: 1 1 25rem;
+}
 .col-2 {
   flex-basis: 50%;
   min-width: 300px;
@@ -364,6 +380,14 @@ ul {
 .row-2 {
   justify-content: space-between;
   margin: 100px auto 50px;
+}
+
+.col-1 {
+  flex: 1 1 25rem;
+}
+
+.col-3 {
+  flex: 32 1 75rem;
 }
 select {
   border: 1px solid #ff523b;
@@ -737,6 +761,10 @@ button{
   cursor: pointer;
 }
 
+button.small {
+  font-size: 1.2rem;
+}
+
 input:hover,
 select:hover,
 textarea:hover,
@@ -751,6 +779,24 @@ button.small {
   font-size: 1.2rem;
 }
 
+
+
+
+/*--Image--*/
+img {
+  border-radius: 0.5rem;
+}
+img.small {
+  max-width: 5rem;
+  width: 100%;
+}
+img.medium {
+  max-width: 29rem;
+  width: 100%;
+}
+img.large {
+  width: 100%;
+}
 
 
 /* --------------------------The End----------------------- */

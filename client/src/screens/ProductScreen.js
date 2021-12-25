@@ -51,6 +51,19 @@ function ProductScreen(props) {
                                         <h1>{product.name}</h1>
                                         <Rating rating={product.rating}></Rating>
                                         <h4>{product.price}</h4>
+                                        <div>
+                                            <h3>Seller{' '}</h3>
+                                            <span className="success">
+                                                <Link to={`/seller/${product.seller._id}`}>
+                                                    {product.seller.seller.name}
+
+                                                </Link>
+                                            </span>
+                                            <Rating
+                                                rating={product.seller.seller.rating}
+                                                numReviews={product.seller.seller.numReviews}
+                                            ></Rating>
+                                        </div>
                                         <h3>Status</h3>
                                         <div>
                                             {product.countInStock > 0 ? (
@@ -95,7 +108,7 @@ function ProductScreen(props) {
                                 </div>
                             </div>
 
-                           
+
                         </div>
                     )}
 

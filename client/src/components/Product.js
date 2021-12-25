@@ -13,7 +13,15 @@ function Product(props) {
                 </Link>
                 <Link to={`/product/${product._id}`}> <h4>{product.name}</h4></Link>
                 <Rating rating={product.rating}></Rating>
-                <p>{product.price}</p>
+                <div className="row">
+                    <p>{product.price}</p>
+                    <div>
+                        <Link to={`/seller/${product.seller._id}`}>
+                            {product.seller.seller.name}
+                        </Link>
+                    </div>
+                </div>
+
             </div>
 
         </>
