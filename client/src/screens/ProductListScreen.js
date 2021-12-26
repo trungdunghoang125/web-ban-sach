@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "../../node_modules/react-router/index";
+import { useNavigate, useLocation } from "../../node_modules/react-router/index";
 import { listProducts } from "../actions/productActions";
 import { createProduct, deleteProduct } from "../actions/productActions";
 import Product from "../components/Product";
@@ -10,6 +10,9 @@ import { PRODUCT_CREATE_RESET, PRODUCT_DELETE_RESET } from "../constants/product
 
 export default function ProductListScreen() {
     const navigate = useNavigate();
+
+    const { pathname } = useLocation();
+    const sellerMode = pathname.indexOf('/seller') >= 0;
 
     const productCreate = useSelector((state) => state.productCreate);
     const {
@@ -21,6 +24,10 @@ export default function ProductListScreen() {
 
     const productList = useSelector((state) => state.productList);
     const { loading, error, products/*, page, pages*/ } = productList;
+    
+    
+    const userSignin = useSelector((state) => state.userSignin);
+    const { userInfo } = userSignin;
     const dispatch = useDispatch();
 
     const productDelete = useSelector((state) => state.productDelete);
@@ -43,7 +50,7 @@ export default function ProductListScreen() {
         if (successDelete) {
             dispatch({ type: PRODUCT_DELETE_RESET });
         }
-        dispatch(listProducts());
+        dispatch(listProducts( {seller: sellerMode ? userInfo._id : ''}));
     }, [
         createdProduct,
         dispatch,

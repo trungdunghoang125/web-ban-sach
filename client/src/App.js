@@ -25,6 +25,15 @@ import ProductEditScreen from "./screens/ProductEditScreen.js";
 import OrderListScreen from "./screens/OrderListScreen.js";
 import UserListScreen from "./screens/UserListScreen.js";
 import UserEditScreen from "./screens/UserEditScreen.js";
+import SellerRoute from "./components/SellerRoute.js";
+import SellerScreen from "./screens/SellerScreen.js";
+
+
+
+
+
+
+
 
 function App() {
 
@@ -40,6 +49,7 @@ function App() {
       </div>
 
       <Routes>
+        <Route path="/seller/:id" element={<SellerScreen />}></Route>
         <Route path="/cart/:id" element={<CartScreen />} />
         <Route path="/product/:id" element={<ProductScreen />} exact />
         <Route path="/product/:id/edit" element={<ProductEditScreen />} exact />
@@ -58,6 +68,7 @@ function App() {
               <ProductListScreen />
             </AdminRoute>
           }
+          exact
         />
 
         <Route
@@ -67,6 +78,7 @@ function App() {
               <OrderListScreen />
             </AdminRoute>
           }
+          exact
         />
 
         <Route
@@ -86,6 +98,25 @@ function App() {
             </AdminRoute>
           }
         />
+
+        <Route
+          path="/productlist/seller"
+          element={
+            <SellerRoute>
+              <ProductListScreen />
+            </SellerRoute>
+          }
+        />
+
+        <Route
+          path="/orderlist/seller"
+          element={
+            <SellerRoute>
+              <OrderListScreen />
+            </SellerRoute>
+          }
+        />
+
         <Route path="/" element={<HomeScreen />} />
       </Routes>
 
