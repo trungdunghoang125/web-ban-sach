@@ -1,5 +1,5 @@
 import React from "react"
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
     return (
@@ -11,8 +11,8 @@ export default function HeroSection() {
                         Read all About it!
                     </h1>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br />
-                        Incidunt voluptas, porro nisi beatae inventore consequuntur?
+                        Books are the quietest and most constant of friends.<br />
+                        They are the most accessible and wisest of counselors, and the most patient of teachers.
                     </p>
                     <Link to="/" className="btn">Explore Now &#x27F6;</Link>
                 </div>
