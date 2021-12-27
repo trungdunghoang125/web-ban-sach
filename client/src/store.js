@@ -22,7 +22,8 @@ import { userSigninReducer,
     userUpdateProfileReducer,
     userListReducer,
     userDeleteReducer,
-    userUpdateReducer
+    userUpdateReducer,
+    userTopSellerListReducer
 } from "./reducers/userReducers";
 
 const initialState = {
@@ -62,7 +63,8 @@ const reducer = combineReducers({
     orderDeliver: orderDeliverReducer,
     userList: userListReducer,
     userDelete: userDeleteReducer,
-    userUpdate: userUpdateReducer
+    userUpdate: userUpdateReducer,
+    userTopSellersList: userTopSellerListReducer,
 });
 
 // const reducer= (state, action) => {

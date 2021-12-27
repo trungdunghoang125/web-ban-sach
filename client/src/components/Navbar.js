@@ -2,6 +2,8 @@ import React from "react"
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { signout } from "../actions/userActions";
+import SearchBox from "./SearchBox";
+
 export default function Navbar() {
     const dispatch = useDispatch();
     const cart = useSelector((state) => state.cart);
@@ -25,9 +27,9 @@ export default function Navbar() {
 
                 <nav>
                     <ul id="MenuItems">
+                        <li><SearchBox /></li>
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/">About</Link></li>
-                        <li><Link to="/">Contact</Link></li>
+
                         <li>
                             {
                                 userInfo ? (

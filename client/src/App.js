@@ -27,7 +27,7 @@ import UserListScreen from "./screens/UserListScreen.js";
 import UserEditScreen from "./screens/UserEditScreen.js";
 import SellerRoute from "./components/SellerRoute.js";
 import SellerScreen from "./screens/SellerScreen.js";
-
+import SearchScreen from "./screens/SearchScreen.js";
 
 
 
@@ -61,6 +61,11 @@ function App() {
         <Route path="/order/:id" element={<OrderScreen />} />
         <Route path="/orderhistory" element={<OrderHistoryScreen />} />
         <Route path="/profile" element={<PrivateRoute><ProfileScreen /></PrivateRoute>} />
+        <Route
+          path="/search/name/:name"
+          element={<SearchScreen />}
+          exact
+        ></Route>
         <Route
           path="/productlist"
           element={
