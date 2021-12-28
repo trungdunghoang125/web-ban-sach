@@ -136,7 +136,7 @@ export default function HomeScreen(props) {
                                                 <i className="fa fa-star"></i>
                                                 <i className="fa fa-star-o"></i>
                                             </div>
-                                            <img src="images/zeeshan.jpg" alt="zeeshansaeed" />
+                                            <img src="images/zeeshan.jpg"/>
                                             <h3>Luong Ngoc Dang</h3>
                                         </div>
                                         <div className="col-4">
@@ -151,7 +151,7 @@ export default function HomeScreen(props) {
                                                 <i className="fa fa-star"></i>
                                                 <i className="fa fa-star-o"></i>
                                             </div>
-                                            <img src="images/Boo12.jpg" alt="zeeshansaeed" />
+                                            <img src="images/Boo12.jpg" />
                                             <h3>Hoang Trung Dung</h3>
                                         </div>
                                         <div className="col-4">
@@ -166,7 +166,7 @@ export default function HomeScreen(props) {
                                                 <i className="fa fa-star"></i>
                                                 <i className="fa fa-star-o"></i>
                                             </div>
-                                            <img src="images/zeeshan.jpg" alt="zeeshansaeed" />
+                                            <img src="images/zeeshan.jpg"/>
                                             <h3>Nguyen Van Tam</h3>
                                         </div>
                                         <div className="col-4">
@@ -181,7 +181,7 @@ export default function HomeScreen(props) {
                                                 <i className="fa fa-star"></i>
                                                 <i className="fa fa-star-o"></i>
                                             </div>
-                                            <img src="images/zeeshan.jpg" alt="zeeshansaeed" />
+                                            <img src="images/zeeshan.jpg" />
                                             <h3>Nguyen Van Luan</h3>
                                         </div>
                                     </div>
