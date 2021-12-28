@@ -1,8 +1,11 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { signout } from "../actions/userActions";
 import SearchBox from "./SearchBox";
+//import { listProductCategories } from './actions/productActions';
+import { listProductCategories } from "../actions/productActions";
+
 
 export default function Navbar() {
     const dispatch = useDispatch();
@@ -16,6 +19,10 @@ export default function Navbar() {
         dispatch(signout());
     };
 
+    useEffect(() => {
+        dispatch(listProductCategories());
+    }, [dispatch]);
+
     return (
         <>
             <div className="navbar">
@@ -28,8 +35,10 @@ export default function Navbar() {
                 <nav>
                     <ul id="MenuItems">
                         <li><SearchBox /></li>
-                        <li><Link to="/">Home</Link></li>
 
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
                         <li>
                             {
                                 userInfo ? (
@@ -91,9 +100,7 @@ export default function Navbar() {
                                         <li>
                                             <Link to="/userlist">Users</Link>
                                         </li>
-                                        <li>
-                                            <Link to="/support">Support</Link>
-                                        </li>
+
                                     </ul>
                                 </div>
                             )}
@@ -110,7 +117,7 @@ export default function Navbar() {
                         <span className="badge">{cartItems.length}</span>
                     )}
                 </Link>
-                <img src="images/menu.png" className="menu-icon" />
+                <img src="images/menu.png" className="menu-icon" alt="" />
             </div>
         </>
     );

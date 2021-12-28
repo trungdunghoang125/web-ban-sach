@@ -13,19 +13,22 @@ import {
   PRODUCT_UPDATE_SUCCESS,
   PRODUCT_UPDATE_FAIL,
   PRODUCT_DELETE_REQUEST,
-  PRODUCT_DELETE_SUCCESS, 
-  PRODUCT_DELETE_FAIL, 
-  PRODUCT_DELETE_RESET
+  PRODUCT_DELETE_SUCCESS,
+  PRODUCT_DELETE_FAIL,
+  PRODUCT_DELETE_RESET,
+  PRODUCT_CATEGORY_LIST_REQUEST,
+  PRODUCT_CATEGORY_LIST_SUCCESS,
+  PRODUCT_CATEGORY_LIST_FAIL
 
 } from "../constants/productConstants";
 
-export const listProducts = ({seller='', name = '',}) => async (dispatch) => {
+export const listProducts = ({ seller = '', name = '', category='' }) => async (dispatch) => {
   dispatch({
     type: PRODUCT_LIST_REQUEST,
   });
 
   try {
-    const { data } = await Axios.get(`/api/products?seller=${seller}&name=${name}`);
+    const { data } = await Axios.get(`/api/products?seller=${seller}&name=${name}&category=${category}`);
     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: PRODUCT_LIST_FAIL, payload: error.message });
@@ -110,7 +113,7 @@ export const deleteProduct = (productId) => async (dispatch, getState) => {
     userSignin: { userInfo },
   } = getState();
   try {
-    const {data} = await Axios.delete(`/api/products/${productId}`, {
+    const { data } = await Axios.delete(`/api/products/${productId}`, {
       headers: { Authorization: `Bearer ${userInfo.token}` },
     });
     dispatch({ type: PRODUCT_DELETE_SUCCESS });
@@ -120,5 +123,17 @@ export const deleteProduct = (productId) => async (dispatch, getState) => {
         ? error.response.data.message
         : error.message;
     dispatch({ type: PRODUCT_DELETE_FAIL, payload: message });
+  }
+};
+
+export const listProductCategories = () => async (dispatch) => {
+  dispatch({
+    type: PRODUCT_CATEGORY_LIST_REQUEST,
+  });
+  try {
+    const { data } = await Axios.get(`/api/products/categories`);
+    dispatch({ type: PRODUCT_CATEGORY_LIST_SUCCESS, payload: data });
+  } catch (error) {
+    dispatch({ type: PRODUCT_CATEGORY_LIST_FAIL, payload: error.message });
   }
 };

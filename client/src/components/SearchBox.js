@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import { useNavigate } from 'react-router-dom';
+import {Link, useNavigate } from 'react-router-dom';
+
 
 export default function SearchBox() {
     const navigate = useNavigate();
@@ -19,6 +20,7 @@ export default function SearchBox() {
                     placeholder="Search.."
                     onChange={(e) => setName(e.target.value)}
                 ></input>
+                
                 <button className="w3-white" type="submit">
                     <i className="fa fa-search"></i>
                 </button>
