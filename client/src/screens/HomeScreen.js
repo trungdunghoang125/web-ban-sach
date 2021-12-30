@@ -103,7 +103,7 @@ export default function HomeScreen(props) {
                                             <img src="images/offer-Book.jpg" className="offer-img" />
                                         </div>
                                         <div className="col-2">
-                                            <p>Available on EbookStore</p>
+                                            <p>Unavailable on EbookStore</p>
                                             <br />
                                             <h2>I Don't Want To Die Poor</h2>
                                             <br />
@@ -113,7 +113,7 @@ export default function HomeScreen(props) {
                                                 young people think twice about the promise that going to college
                                                 at any cost is the only path to upward social mobility.
                                             </small>
-                                            <div key={product._id}><Link to={`/product/${product._id}`} className="btn">Buy Now &#8594;</Link></div>
+                                            {/* <div key={product._id}><Link to={`/product/${product._id}`} className="btn">Buy Now &#8594;</Link></div> */}
                                         </div>
                                     </div>
                                 </div>
@@ -136,7 +136,7 @@ export default function HomeScreen(props) {
                                                 <i className="fa fa-star"></i>
                                                 <i className="fa fa-star-o"></i>
                                             </div>
-                                            <img src="images/zeeshan.jpg" alt="zeeshansaeed" />
+                                            <img src="images/zeeshan.jpg" alt="" />
                                             <h3>Luong Ngoc Dang</h3>
                                         </div>
                                         <div className="col-4">
@@ -151,7 +151,7 @@ export default function HomeScreen(props) {
                                                 <i className="fa fa-star"></i>
                                                 <i className="fa fa-star-o"></i>
                                             </div>
-                                            <img src="images/Boo12.jpg" alt="zeeshansaeed" />
+                                            <img src="images/Boo12.jpg" alt="" />
                                             <h3>Hoang Trung Dung</h3>
                                         </div>
                                         <div className="col-4">
@@ -166,7 +166,7 @@ export default function HomeScreen(props) {
                                                 <i className="fa fa-star"></i>
                                                 <i className="fa fa-star-o"></i>
                                             </div>
-                                            <img src="images/zeeshan.jpg" alt="zeeshansaeed" />
+                                            <img src="images/zeeshan.jpg" alt="" />
                                             <h3>Nguyen Van Tam</h3>
                                         </div>
                                         <div className="col-4">
@@ -181,7 +181,7 @@ export default function HomeScreen(props) {
                                                 <i className="fa fa-star"></i>
                                                 <i className="fa fa-star-o"></i>
                                             </div>
-                                            <img src="images/zeeshan.jpg" alt="zeeshansaeed" />
+                                            <img src="images/zeeshan.jpg" alt="" />
                                             <h3>Nguyen Van Luan</h3>
                                         </div>
                                     </div>
