@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { signout } from "../actions/userActions";
 import SearchBox from "./SearchBox";
 //import { listProductCategories } from './actions/productActions';
+import { Helmet } from "react-helmet";
 import { listProductCategories } from "../actions/productActions";
 
 
@@ -19,12 +20,23 @@ export default function Navbar() {
         dispatch(signout());
     };
 
+    // const menutoggle = () => {
+    //     const MenuItems = document.getElementById("MenuItems");
+    //     MenuItems.style.maxHeight = "0px";
+    //     if (MenuItems.style.maxHeight === "0px") {
+    //         MenuItems.style.maxHeight = "200px";
+    //     } else {
+    //         MenuItems.style.maxHeight = "0px";
+    //     }
+
+    // };
+
     useEffect(() => {
         dispatch(listProductCategories());
     }, [dispatch]);
 
     return (
-        <>
+        <div className="container">
             <div className="navbar">
                 <div className="logo">
                     <Link to="/">
@@ -34,6 +46,7 @@ export default function Navbar() {
 
                 <nav>
                     <ul id="MenuItems">
+
                         <li><SearchBox /></li>
 
                         <li>
@@ -43,7 +56,7 @@ export default function Navbar() {
                             {
                                 userInfo ? (
                                     <div className="dropdown">
-                                        <li><Link to="#">{userInfo.name}<i className="fa fa-caret-down"></i>{' '}</Link></li>
+                                        <Link to="#">{userInfo.name}<i className="fa fa-caret-down"></i>{' '}</Link>
                                         <ul className="dropdown-content">
                                             <li>
                                                 <Link to="/profile">User Profile</Link>
@@ -60,7 +73,7 @@ export default function Navbar() {
 
                                     </div>
                                 ) : (
-                                    <li><Link to="/signin">Sign In</Link></li>
+                                    <Link to="/signin">Sign In</Link>
                                 )}
                         </li>
                         <li>
@@ -117,8 +130,25 @@ export default function Navbar() {
                         <span className="badge">{cartItems.length}</span>
                     )}
                 </Link>
-                <img src="images/menu.png" className="menu-icon" alt="" />
+                <input type="checkbox" id="btnControl" />
+                <label className="check-btnControl" for="btnControl">
+                    <img src="images/menu.png" className="menu-icon" alt="" /*onClick={menutoggle}*/ />
+                </label>
+
+                {/* <Helmet>
+                    <script>
+                        var MenuItems = document.getElementById("MenuItems");
+                        MenuItems.style.maxHeight = "0px";
+                        function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+                            MenuItems.style.maxHeight = "200px";
+        } else {
+                            MenuItems.style.maxHeight = "0px";
+        }
+      }
+                    </script>
+                </Helmet> */}
             </div>
-        </>
+        </div>
     );
 }

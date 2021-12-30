@@ -12,7 +12,7 @@ export default function SearchBox() {
     };
     return (
         <form className="search" onSubmit={submitHandler}>
-            <div className="row">
+            <div className="">
                 <input
                     type="text"
                     name="q"

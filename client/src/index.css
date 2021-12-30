@@ -47,6 +47,13 @@ nav ul li {
   display: inline-block;
   margin: 20px;
 }
+
+
+
+
+
+
+
 a {
   text-decoration: none;
   color: #555;
@@ -351,16 +358,22 @@ ul {
   display: none;
 }
 
+
+#btnControl {
+  display: none;
+}
+
 /* ----------------media query for menu---------------- */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1130px) {
+  
   nav ul {
     position: absolute;
-    top: 110px;
+    top: 100px;
     left: 0;
     background: #333;
     width: 100%;
-    overflow: hidden;
-    transition: 0.5s;
+    height: 250px;
+    transition: all 0.5s;
   }
   nav ul li {
     display: block;
@@ -375,6 +388,14 @@ ul {
     display: block;
     cursor: pointer;
   }
+
+
+
+  
+  #btnControl:checked ~ #MenuItems {
+    top: 100px;
+  }
+
 }
 /* -------------------All Ebooks--------------------------- */
 .row-2 {
