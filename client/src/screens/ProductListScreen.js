@@ -55,10 +55,10 @@ export default function ProductListScreen() {
         createdProduct,
         dispatch,
         navigate,
-        // sellerMode,
+        sellerMode,
         successCreate,
         successDelete,
-        // userInfo._id,
+        userInfo._id,
         // pageNumber,
     ]);
 

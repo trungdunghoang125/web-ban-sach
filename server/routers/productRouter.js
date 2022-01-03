@@ -50,7 +50,7 @@ productRouter.get(
 productRouter.post(
     '/',
     isAuth,
-    isAdmin,
+    //isAdmin,
     isSellerOrAdmin,
     expressAsyncHandler(async (req, res) => {
         const product = new Product({
